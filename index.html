@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trafix - Point Earnings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
+        h2 {
+            text-align: center;
+            color: black;
+        }
+        .earnings-section {
+            margin: 30px 0;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            background-color: #f9f9f9;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .button {
+            display: inline-block;
+            background-color: black;
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+            font-size: 16px;
+            margin-top: 15px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Trafix - Point Earnings</h2>
+    <div class="earnings-section">
+        <h3>Ways to Earn Points</h3>
+        <ul>
+            <li><strong>Travel 1 km:</strong> Earn 10 points</li>
+            <li><strong>Redeem Gift Cards:</strong> Earn 50 points</li>
+            <li><strong>Daily Log In:</strong> Earn 0.5 points per day</li>
+            <li><strong>Welcome Reward (once):</strong> Earn 10 points</li>
+        </ul>
+
+        <button class="button" onclick="earnPoints('travel', 10)">Earn Points for Traveling 1 km</button>
+        <button class="button" onclick="earnPoints('giftCard', 50)">Redeem Gift Card</button>
+        <button class="button" onclick="earnPoints('login', 0.5)">Log In Today</button>
+        <button class="button" onclick="earnPoints('welcome', 10)">Claim Welcome Reward</button>
+    </div>
+</div>
+
+<script>
+    // Temporary points tracking for demonstration purposes
+    let points = 0;
+
+    // Function to simulate earning points
+    function earnPoints(action, amount) {
+        points += amount;
+        alert(`You earned ${amount} points! Your total points: ${points}`);
+    }
+</script>
+
+</body>
+</html>
